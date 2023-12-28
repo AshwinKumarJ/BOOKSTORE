@@ -1,0 +1,26 @@
+EmpId,Name,Phone Number,Address,Email,Job,Salary
+emp1,John Doe,1234567890,123 Main St, john.doe@example.com,Admin,60000
+emp2,Jane Smith,9876543210,456 Elm St, jane.smith@example.com,Store Manager,55000
+emp3,Michael Johnson,5554443333,789 Oak St, michael.johnson@example.com,Cashier,30000
+emp4,Emily Wilson,3335552222,111 Pine St, emily.wilson@example.com,Inventory Manager,48000
+emp5,Robert Brown,7772221111,222 Birch St, robert.brown@example.com,Cashier,31000
+emp6,Susan Davis,8881112222,333 Maple St, susan.davis@example.com,Admin,62000
+emp7,David Lee,4446664444,444 Willow St, david.lee@example.com,Store Manager,56000
+emp8,Linda Miller,6664445555,555 Cedar St, linda.miller@example.com,Cashier,32000
+emp9,William White,2225553333,666 Redwood St, william.white@example.com,Inventory Manager,49000
+emp10,Sarah Jones,9996669999,777 Sequoia St, sarah.jones@example.com,Cashier,33000
+emp11,Christopher Martinez,1116661111,888 Sycamore St, christopher.martinez@example.com,Admin,63000
+emp12,Karen Taylor,7773333333,999 Poplar St, karen.taylor@example.com,Store Manager,57000
+emp13,Matthew Garcia,5558885555,1010 Cedar St, matthew.garcia@example.com,Inventory Manager,50000
+emp14,Patricia Hernandez,8881118888,1111 Fir St, patricia.hernandez@example.com,Cashier,34000
+emp15,Daniel Lopez,3334443333,1212 Pine St, daniel.lopez@example.com,Admin,64000
+emp16,Donna Hill,6662221111,1313 Oak St, donna.hill@example.com,Store Manager,58000
+emp17,Joseph Wright,4443334444,1414 Elm St, joseph.wright@example.com,Cashier,35000
+emp18,Lisa Scott,9995559999,1515 Maple St, lisa.scott@example.com,Inventory Manager,51000
+emp19,Charles King,2226662222,1616 Birch St, charles.king@example.com,Cashier,36000
+emp20,Nancy Green,1238881234,1717 Willow St, nancy.green@example.com,Admin,65000
+emp21,Thomas Adams,5551235555,1818 Cedar St, thomas.adams@example.com,Store Manager,59000
+emp22,Karen Thomas,3331233333,1919 Redwood St, karen.thomas@example.com,Cashier,37000
+emp23,Michael Harris,7771237777,2020 Sequoia St, michael.harris@example.com,Inventory Manager,52000
+emp24,Deborah Turner,4441234444,2121 Sycamore St, deborah.turner@example.com,Cashier,38000
+emp25,David Baker,8881238888,2222 Poplar St, david.baker@example.com,Admin,66000

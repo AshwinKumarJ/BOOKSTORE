@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <title>BOOKSTORE</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-body">
+    <div class="container d-flex">
+        <a style="font-weight: bold;" class="navbar-brand" href="/">BOOKSTORE</a>
+
+        <div class="navbar-collapse">
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                  <button id="query" class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                    SEARCH
+                  </button>
+                  <ul class="dropdown-menu dropdown-menu-dark">
+                    <li><a class="dropdown-item" id="booksearch">BOOK</a></li>
+                    <li><a class="dropdown-item" id="ordersearch">ORDER</a></li>
+                    <li><a class="dropdown-item" id="authorsearch">AUTHOR</a></li>
+                    <li><a class="dropdown-item" id="empsearch">EMPLOYEE</a></li>
+                    <li><a class="dropdown-item" id="invsearch">INVENTORY</a></li>
+                    <li><a class="dropdown-item" id="pubsearch">PUBLISHER</a></li>
+                    <li><a class="dropdown-item" id="bookauthorsearch">BOOK AUTHOR</a></li>
+                    <li><a class="dropdown-item" id="bookpublishersearch">BOOK PUBLISHER</a></li>
+                  </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="navbar-collapse">
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                  <button id="query" class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                    INSERT
+                  </button>
+                  <ul class="dropdown-menu dropdown-menu-dark">
+                    <li><a class="dropdown-item" id="bookinsert">BOOK</a></li>
+                    <li><a class="dropdown-item" id="logininsert">LOGIN</a></li>
+                    <li><a class="dropdown-item" id="orderinsert">ORDER</a></li>
+                    <li><a class="dropdown-item" id="authorinsert">AUTHOR</a></li>
+                    <li><a class="dropdown-item" id="empinsert">EMPLOYEE</a></li>
+                    <li><a class="dropdown-item" id="invinsert">INVENTORY</a></li>
+                    <li><a class="dropdown-item" id="pubinsert">PUBLISHER</a></li>
+                    <li><a class="dropdown-item" id="bookauthorinsert">BOOK AUTHOR</a></li>
+                    <li><a class="dropdown-item" id="bookpublisherinsert">BOOK PUBLISHER</a></li>
+                  </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="navbar-collapse">
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                  <button id="query" class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                    UPDATE
+                  </button>
+                  <ul class="dropdown-menu dropdown-menu-dark">
+                    <li><a class="dropdown-item" id="bookupdate">BOOK</a></li>
+                    <li><a class="dropdown-item" id="orderupdate">ORDER</a></li>
+                    <li><a class="dropdown-item" id="authorupdate">AUTHOR</a></li>
+                    <li><a class="dropdown-item" id="empupdate">EMPLOYEE</a></li>
+                    <li><a class="dropdown-item" id="invupdate">INVENTORY</a></li>
+                    <li><a class="dropdown-item" id="pubupdate">PUBLISHER</a></li>
+                    <li><a class="dropdown-item" id="bookauthorupdate">BOOK AUTHOR</a></li>
+                    <li><a class="dropdown-item" id="bookpublisherupdate">BOOK PUBLISHER</a></li>
+                  </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="navbar-collapse">
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                  <button id="query" class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                    DELETE
+                  </button>
+                  <ul class="dropdown-menu dropdown-menu-dark">
+                    <li><a class="dropdown-item" id="bookdelete">BOOK</a></li>
+                    <li><a class="dropdown-item" id="authordelete">AUTHOR</a></li>
+                    <li><a class="dropdown-item" id="empdelete">EMPLOYEE</a></li>
+                    <li><a class="dropdown-item" id="pubdelete">PUBLISHER</a></li>
+                  </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    </nav>
+
+    <div class="container align-items-center justify-content-center">
+
+        <form style="display:none;" id="booksearchform" class="forms">
+            <h5 align="center">BOOK SEARCH</h5>
+            <div class="mb-3 d-flex">
+                <input style="margin-bottom: 5px;" type="text" name="isbn" id="isbns" class="form-control mr-2" placeholder="BOOK ISBN">
+                <button style="margin-bottom: 5px;" type="submit" class="btn btn-dark">SEARCH</button>
+            </div>
+
+            <div class="mb-3 row">
+                <div class="col-md-6">
+                    <input type="text" id="titles" class="form-control" placeholder="TITLE">
+                </div>
+                <div class="col-md-6">
+                    <input type="text" id="years" class="form-control" placeholder="YEAR">
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <div class="col-md-6">
+                    <input type="text" id="genres" class="form-control" placeholder="GENRE">
+                </div>
+                <div class="col-md-6">
+                    <input type="text" id="prices" class="form-control" placeholder="PRICE">
+                </div>
+            </div>
+            <div>
+                <input type="text" id="versions" class="form-control" placeholder="VERSION">
+            </div>
+        </form>
+
+    </div>
+
+    <div class="container align-items-center justify-content-center">
+
+        <form style="display:none;" id="empsearchform" class="forms">
+            <h5 align="center">EMPLOYEE SEARCH</h5>
+            <div class="mb-3 d-flex">
+                <input style="margin-bottom: 5px;" type="text" name="empid" id="empid" class="form-control mr-2" placeholder="EMPLOYEE ID">
+                <button style="margin-bottom: 5px;" type="submit" class="btn btn-dark">SEARCH</button>
+            </div>
+
+            <div class="mb-3 row">
+                <div class="col-md-6">
+                    <input type="text" id="empname" class="form-control" placeholder="NAME">
+                </div>
+                <div class="col-md-6">
+                    <input type="text" id="empphone" class="form-control" placeholder="PHONE">
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <div class="col-md-6">
+                    <input type="text" id="empaddress" class="form-control" placeholder="ADDRESS">
+                </div>
+                <div class="col-md-6">
+                    <input type="text" id="empemail" class="form-control" placeholder="EMAIL">
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <div class="col-md-6">
+                    <input type="text" id="empjob" class="form-control" placeholder="JOB">
+                </div>
+                <div class="col-md-6">
+                    <input type="text" id="empsalary" class="form-control" placeholder="SALARY">
+                </div>
+            </div>
+        </form>
+
+    </div>
+
+    <div class="container align-items-center justify-content-center">
+
+        <form style="display:none;" id="pubsearchform" class="forms">
+            <h5 align="center">PUBLISHER SEARCH</h5>
+            <div class="mb-3 d-flex">
+                <input style="margin-bottom: 5px;" type="text" name="pubid" id="pubid" class="form-control mr-2" placeholder="PUBLISHER ID">
+                <button style="margin-bottom: 5px;" type="submit" class="btn btn-dark">SEARCH</button>
+            </div>
+
+            <div class="mb-3 row">
+                <div class="col-md-6">
+                    <input type="text" id="pubname" class="form-control" placeholder="NAME">
+                </div>
+                <div class="col-md-6">
+                    <input type="text" id="pubphone" class="form-control" placeholder="PHONE">
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <div>
+                    <input style="margin-bottom: 5px; margin-top: 5px;" type="text" id="pubemail" class="form-control" placeholder="EMAIL">
+                </div>
+            </div>
+        </form>
+
+    </div>
+
+    <div class="container align-items-center justify-content-center">
+
+        <form style="display:none;" id="authorsearchform" class="forms">
+            <h5 align="center">AUTHOR SEARCH</h5>
+            <div class="mb-3 d-flex">
+                <input style="margin-bottom: 5px" type="text" name="authid" id="authid" class="form-control mr-2" placeholder="AUTHOR ID">
+                <button style="margin-bottom: 5px" type="submit" class="btn btn-dark">SEARCH</button>
+            </div>
+
+            <div class="mb-3 row">
+                <div class="col-md-6">
+                    <input type="text" id="authname" class="form-control" placeholder="NAME">
+                </div>
+                <div class="col-md-6">
+                    <input type="text" id="authphone" class="form-control" placeholder="PHONE">
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <div>
+                    <input style="margin-bottom: 5px; margin-top: 5px;" type="text" id="authemail" class="form-control" placeholder="EMAIL">
+                </div>
+            </div>
+        </form>
+
+    </div>
+
+    <div class="container align-items-center justify-content-center">
+
+        <form style="display:none;" id="ordersearchform" class="forms">
+            <h5 align="center">ORDER SEARCH</h5>
+            <div class="mb-3 d-flex">
+                <input style="margin-bottom: 5px" type="text" name="orderid" id="orderid" class="form-control mr-2" placeholder="ORDER ID">
+                <button style="margin-bottom: 5px" type="submit" class="btn btn-dark">SEARCH</button>
+            </div>
+
+            <div>
+                <input style="margin-bottom: 20px" type="text" id="orderisbn" class="form-control" placeholder="BOOK ISBN">
+            </div>
+            <div class="mb-3 row">
+                <div class="col-md-6">
+                    <input type="text" id="orderqty" class="form-control" placeholder="QUANTITY">
+                </div>
+                <div class="col-md-6">
+                    <input type="text" id="orderamount" class="form-control" placeholder="AMOUNT">
+                </div>
+            </div>
+        </form>
+
+    </div>
+
+    <div class="container align-items-center justify-content-center">
+
+        <form style="display:none;" id="invsearchform" class="forms">
+            <h5 align="center">INVENTORY SEARCH</h5>
+            <div class="mb-3 d-flex">
+                <input style="margin-bottom: 5px" type="text" name="invid" id="invid" class="form-control mr-2" placeholder="INVENTORY ID">
+                <button style="margin-bottom: 5px" type="submit" class="btn btn-dark">SEARCH</button>
+            </div>
+
+            <div class="mb-3 row">
+                <div class="col-md-6">
+                    <input type="text" id="invisbn" class="form-control" placeholder="BOOK ISBN">
+                </div>
+                <div class="col-md-6">
+                    <input style="margin-bottom: 5px; margin-top: 5px;" type="text" id="invstock" class="form-control" placeholder="STOCK">
+                </div>
+            </div>
+        </form>
+
+    </div>
+
+    <div class="container align-items-center justify-content-center">
+
+        <form style="display:none;" id="bookauthorsearchform" class="forms">
+            <h5 align="center">BOOK AUTHOR SEARCH</h5>
+            <div class="mb-3 d-flex">
+                <input style="margin-bottom: 5px" type="text" name="isbn" id="baisbn" class="form-control mr-2" placeholder="BOOK ISBN">
+                <button style="margin-bottom: 5px" type="submit" class="btn btn-dark">SEARCH</button>
+            </div>
+
+            <div class="mb-3 row">
+                <div class="col-md-6">
+                    <input type="text" name="authid" id="bookauthid" class="form-control" placeholder="AUTHOR ID">
+                </div>
+                <div class="col-md-6">
+                    <input type="text" name="authname" id="bookauthname" class="form-control" placeholder="AUTHOR NAME">
+                </div>
+            </div>
+        </form>
+
+    </div>
+
+    <div class="container align-items-center justify-content-center">
+
+        <form style="display:none;" id="bookpublishersearchform" class="forms">
+            <h5 align="center">BOOK PUBLISHER SEARCH</h5>
+            <div class="mb-3 d-flex">
+                <input style="margin-bottom: 5px" type="text" name="isbn" id="bpisbn" class="form-control mr-2" placeholder="BOOK ISBN">
+                <button style="margin-bottom: 5px" type="submit" class="btn btn-dark">SEARCH</button>
+            </div>
+
+            <div class="mb-3 row">
+                <div class="col-md-6">
+                    <input type="text" name="pubid" id="bookpubid" class="form-control" placeholder="PUBLISHER ID">
+                </div>
+                <div class="col-md-6">
+                    <input type="text" name="pubname" id="bookpubname" class="form-control" placeholder="PUBLISHER NAME">
+                </div>
+            </div>
+        </form>
+
+    </div>
+
+    <div class="container align-items-center justify-content-center">
+
+        <form style="display:none;" id="bookinsertform" class="forms">
+            <h5 align="center">BOOK INSERT</h5>
+            <div class="mb-3 d-flex">
+                <input style="margin-bottom: 5px;" type="text" name="isbn" class="form-control mr-2" placeholder="BOOK ISBN">
+                <button style="margin-bottom: 5px;" type="submit" class="btn btn-dark">INSERT</button>
+            </div>
+
+            <div class="mb-3 row">
+                <div class="col-md-6">
+                    <input type="text" name="title" class="form-control" placeholder="TITLE">
+                </div>
+                <div class="col-md-6">
+                    <input type="text" name="year" class="form-control" placeholder="YEAR">
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <div class="col-md-6">
+                    <input type="text" name="genre" class="form-control" placeholder="GENRE">
+                </div>
+                <div class="col-md-6">
+                    <input type="text" name="price" class="form-control" placeholder="PRICE">
+                </div>
+            </div>
+            <div>
+                <input type="text" name="version" class="form-control" placeholder="VERSION">
+            </div>
+        </form>
+
+    </div>
+
+    <div class="container align-items-center justify-content-center">
+
+        <form style="display:none;" id="empinsertform" class="forms">
+            <h5 align="center">EMPLOYEE INSERT</h5>
+            <div class="mb-3 d-flex">
+                <input style="margin-bottom: 5px;" type="text" name="empid" class="form-control mr-2" placeholder="EMPLOYEE ID">
+                <button style="margin-bottom: 5px;" type="submit" class="btn btn-dark">INSERT</button>
+            </div>
+
+            <div class="mb-3 row">
+                <div class="col-md-6">
+                    <input type="text" name="name" class="form-control" placeholder="NAME">
+                </div>
+                <div class="col-md-6">
+                    <input type="text" name="phone" class="form-control" placeholder="PHONE">
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <div class="col-md-6">
+                    <input type="text" name="address" class="form-control" placeholder="ADDRESS">
+                </div>
+                <div class="col-md-6">
+                    <input type="text" name="email" class="form-control" placeholder="EMAIL">
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <div class="col-md-6">
+                    <input type="text" name="job" class="form-control" placeholder="JOB">
+                </div>
+                <div class="col-md-6">
+                    <input type="text" name="salary" class="form-control" placeholder="SALARY">
+                </div>
+            </div>
+        </form>
+
+    </div>
+
+    <div class="container align-items-center justify-content-center">
+
+        <form style="display:none;" id="pubinsertform" class="forms">
+            <h5 align="center">PUBLISHER INSERT</h5>
+            <div class="mb-3 d-flex">
+                <input style="margin-bottom: 5px;" type="text" name="pubid" class="form-control mr-2" placeholder="PUBLISHER ID">
+                <button style="margin-bottom: 5px;" type="submit" class="btn btn-dark">INSERT</button>
+            </div>
+
+            <div class="mb-3 row">
+                <div class="col-md-6">
+                    <input type="text" name="name" class="form-control" placeholder="NAME">
+                </div>
+                <div class="col-md-6">
+                    <input type="text" name="phone" class="form-control" placeholder="PHONE">
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <div>
+                    <input style="margin-bottom: 5px; margin-top: 5px;" type="text" name="email" class="form-control" placeholder="EMAIL">
+                </div>
+            </div>
+        </form>
+
+    </div>
+
+    <div class="container align-items-center justify-content-center">
+
+        <form style="display:none;" id="authorinsertform" class="forms">
+            <h5 align="center">AUTHOR INSERT</h5>
+            <div class="mb-3 d-flex">
+                <input style="margin-bottom: 5px" type="text" name="authid" class="form-control mr-2" placeholder="AUTHOR ID">
+                <button style="margin-bottom: 5px" type="submit" class="btn btn-dark">INSERT</button>
+            </div>
+
+            <div class="mb-3 row">
+                <div class="col-md-6">
+                    <input type="text" name="name" class="form-control" placeholder="NAME">
+                </div>
+                <div class="col-md-6">
+                    <input type="text" name="phone" class="form-control" placeholder="PHONE">
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <div>
+                    <input style="margin-bottom: 5px; margin-top: 5px;" type="text" name="email" class="form-control" placeholder="EMAIL">
+                </div>
+            </div>
+        </form>
+
+    </div>
+
+    <div class="container align-items-center justify-content-center">
+
+        <form style="display:none;" id="orderinsertform" class="forms">
+            <h5 align="center">ORDER INSERT</h5>
+            <div class="mb-3 d-flex">
+                <input style="margin-bottom: 5px" type="text" name="orderid" class="form-control mr-2" placeholder="ORDER ID">
+                <button style="margin-bottom: 5px" type="submit" class="btn btn-dark">INSERT</button>
+            </div>
+
+            <div class="mb-3 row">
+                <div class="col-md-6">
+                    <input type="text" name="isbn" class="form-control" placeholder="BOOK ISBN">
+                </div>
+                <div class="col-md-6">
+                    <input type="text" name="qty" class="form-control" placeholder="QUANTITY">
+                </div>
+            </div>
+        </form>
+
+    </div>
+
+    <div class="container align-items-center justify-content-center">
+
+        <form style="display:none;" id="invinsertform" class="forms">
+            <h5 align="center">INVENTORY INSERT</h5>
+            <div class="mb-3 d-flex">
+                <input style="margin-bottom: 5px" type="text" name="invid" class="form-control mr-2" placeholder="INVENTORY ID">
+                <button style="margin-bottom: 5px" type="submit" class="btn btn-dark">INSERT</button>
+            </div>
+
+            <div class="mb-3 row">
+                <div class="col-md-6">
+                    <input type="text" name="isbn" class="form-control" placeholder="BOOK ISBN">
+                </div>
+                <div class="col-md-6">
+                    <input style="margin-bottom: 5px; margin-top: 5px;" type="text" name="stock" class="form-control" placeholder="STOCK">
+                </div>
+            </div>
+        </form>
+
+    </div>
+
+    <div class="container align-items-center justify-content-center">
+
+        <form style="display:none;" id="logininsertform" class="forms">
+            <h5 align="center">LOGIN INSERT</h5>
+            <div class="mb-3 d-flex">
+                <input style="margin-bottom: 5px" type="text" name="empid" class="form-control mr-2" placeholder="EMPLOYEE ID">
+                <button style="margin-bottom: 5px" type="submit" class="btn btn-dark">INSERT</button>
+            </div>
+
+            <div class="mb-3 row">
+                <div class="col-md-6">
+                    <input type="text" name="username" class="form-control" placeholder="USERNAME">
+                </div>
+                <div class="col-md-6">
+                    <input style="margin-bottom: 5px; margin-top: 5px;" type="password" name="pwd" class="form-control" placeholder="PASSWORD">
+                </div>
+            </div>
+        </form>
+
+    </div>
+
+    <div class="container align-items-center justify-content-center">
+
+        <form style="display:none;" id="bookauthorinsertform" class="forms">
+            <h5 align="center">BOOK AUTHOR INSERT</h5>
+            <div class="mb-3 d-flex">
+                <input style="margin-bottom: 5px" type="text" name="isbn" class="form-control mr-2" placeholder="BOOK ISBN">
+                <button style="margin-bottom: 5px" type="submit" class="btn btn-dark">INSERT</button>
+            </div>
+
+            <div>
+                <div>
+                    <input type="text" name="authid" class="form-control" placeholder="AUTHOR ID">
+                </div>
+            </div>
+        </form>
+
+    </div>
+
+    <div class="container align-items-center justify-content-center">
+
+        <form style="display:none;" id="bookpublisherinsertform" class="forms">
+            <h5 align="center">BOOK PUBLISHER INSERT</h5>
+            <div class="mb-3 d-flex">
+                <input style="margin-bottom: 5px" type="text" name="isbn" class="form-control mr-2" placeholder="BOOK ISBN">
+                <button style="margin-bottom: 5px" type="submit" class="btn btn-dark">INSERT</button>
+            </div>
+
+            <div>
+                <div>
+                    <input type="text" name="pubid" class="form-control" placeholder="PUBLISHER ID">
+                </div>
+            </div>
+        </form>
+
+    </div>
+
+    <div class="container align-items-center justify-content-center">
+
+        <form style="display:none;" id="bookupdateform" class="forms">
+            <h5 align="center">BOOK UPDATE</h5>
+            <div class="mb-3 d-flex">
+                <input style="margin-bottom: 5px;" type="text" name="isbn" class="form-control mr-2" placeholder="BOOK ISBN">
+                <button style="margin-bottom: 5px;" type="submit" class="btn btn-dark">UPDATE</button>
+            </div>
+
+            <div class="mb-3 row">
+                <div class="col-md-6">
+                    <input type="text" name="title" id="ubt" placeholder="TITLE" class="form-control">
+                </div>
+                <div class="col-md-6">
+                    <input type="text" name="year" id="uby" placeholder="YEAR" class="form-control">
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <div class="col-md-6">
+                    <input type="text" name="genre" id="ubg" placeholder="GENRE" class="form-control">
+                </div>
+                <div class="col-md-6">
+                    <input type="text" name="price" id="ubp" placeholder="PRICE" class="form-control">
+                </div>
+            </div>
+            <div>
+                <input type="text" name="version" id="ubv" placeholder="VERSION" class="form-control">
+            </div>
+        </form>
+
+    </div>
+
+    <div class="container align-items-center justify-content-center">
+
+        <form style="display:none;" id="empupdateform" class="forms">
+            <h5 align="center">EMPLOYEE UPDATE</h5>
+            <div class="mb-3 d-flex">
+                <input style="margin-bottom: 5px;" type="text" name="empid" class="form-control mr-2" placeholder="EMPLOYEE ID">
+                <button style="margin-bottom: 5px;" type="submit" class="btn btn-dark">UPDATE</button>
+            </div>
+
+            <div class="mb-3 row">
+                <div class="col-md-6">
+                    <input type="text" name="empname" id="uen" class="form-control" placeholder="NAME">
+                </div>
+                <div class="col-md-6">
+                    <input type="text" name="empphone" id="uep" class="form-control" placeholder="PHONE">
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <div class="col-md-6">
+                    <input type="text" name="empaddress" id="uea" class="form-control" placeholder="ADDRESS">
+                </div>
+                <div class="col-md-6">
+                    <input type="text" name="empemail" id="uee" class="form-control" placeholder="EMAIL">
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <div class="col-md-6">
+                    <input type="text" name="empjob" id="uej" class="form-control" placeholder="JOB">
+                </div>
+                <div class="col-md-6">
+                    <input type="text" name="empsalary" id="ues" class="form-control" placeholder="SALARY">
+                </div>
+            </div>
+        </form>
+
+    </div>
+
+    <div class="container align-items-center justify-content-center">
+
+        <form style="display:none;" id="pubupdateform" class="forms">
+            <h5 align="center">PUBLISHER UPDATE</h5>
+            <div class="mb-3 d-flex">
+                <input style="margin-bottom: 5px;" type="text" name="pubid" class="form-control mr-2" placeholder="PUBLISHER ID">
+                <button style="margin-bottom: 5px;" type="submit" class="btn btn-dark">UPDATE</button>
+            </div>
+
+            <div class="mb-3 row">
+                <div class="col-md-6">
+                    <input type="text" name="pubname" id="upn" class="form-control" placeholder="NAME">
+                </div>
+                <div class="col-md-6">
+                    <input type="text" name="pubphone" id="upp" class="form-control" placeholder="PHONE">
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <div>
+                    <input style="margin-bottom: 5px; margin-top: 5px;" type="text" name="pubemail" id="upe" class="form-control" placeholder="EMAIL">
+                </div>
+            </div>
+        </form>
+
+    </div>
+
+    <div class="container align-items-center justify-content-center">
+
+        <form style="display:none;" id="authorupdateform" class="forms">
+            <h5 align="center">AUTHOR UPDATE</h5>
+            <div class="mb-3 d-flex">
+                <input style="margin-bottom: 5px" type="text" name="authid" class="form-control mr-2" placeholder="AUTHOR ID">
+                <button style="margin-bottom: 5px" type="submit" class="btn btn-dark">UPDATE</button>
+            </div>
+
+            <div class="mb-3 row">
+                <div class="col-md-6">
+                    <input type="text" name="authname" id="uan" class="form-control" placeholder="NAME">
+                </div>
+                <div class="col-md-6">
+                    <input type="text" name="authphone" id="uap" class="form-control" placeholder="PHONE">
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <div>
+                    <input style="margin-bottom: 5px; margin-top: 5px;" type="text" name="authemail" id="uae" class="form-control" placeholder="EMAIL">
+                </div>
+            </div>
+        </form>
+
+    </div>
+
+    <div class="container align-items-center justify-content-center">
+
+        <form style="display:none;" id="orderupdateform" class="forms">
+            <h5 align="center">ORDER UPDATE</h5>
+            <div class="mb-3 d-flex">
+                <input style="margin-bottom: 5px" type="text" name="orderid" class="form-control mr-2" placeholder="ORDER ID">
+                <button style="margin-bottom: 5px" type="submit" class="btn btn-dark">UPDATE</button>
+            </div>
+            <div>
+                <div>
+                    <input type="text" name="qty" id="qty" class="form-control" placeholder="QUANTITY">
+                </div>
+            </div>
+        </form>
+
+    </div>
+
+    <div class="container align-items-center justify-content-center">
+
+        <form style="display:none;" id="invupdateform" class="forms">
+            <h5 align="center">INVENTORY UPDATE</h5>
+            <div class="mb-3 d-flex">
+                <input style="margin-bottom: 5px" type="text" name="invid" class="form-control mr-2" placeholder="INVENTORY ID">
+                <button style="margin-bottom: 5px" type="submit" class="btn btn-dark">UPDATE</button>
+            </div>
+
+            <div>
+                <div>
+                    <input style="margin-bottom: 5px; margin-top: 5px;" type="text" name="stock" id="stock" class="form-control" placeholder="STOCK">
+                </div>
+            </div>
+        </form>
+
+    </div>
+
+    <div class="container align-items-center justify-content-center">
+
+        <form style="display:none;" id="bookauthorupdateform" class="forms">
+            <h5 align="center">BOOK AUTHOR UPDATE</h5>
+            <div class="mb-3 d-flex">
+                <input style="margin-bottom: 5px" type="text" name="isbn" class="form-control mr-2" placeholder="BOOK ISBN">
+                <button style="margin-bottom: 5px" type="submit" class="btn btn-dark">UPDATE</button>
+            </div>
+
+            <div>
+                <div>
+                    <input type="text" name="authid" class="form-control" placeholder="AUTHOR ID">
+                </div>
+            </div>
+        </form>
+
+    </div>
+
+    <div class="container align-items-center justify-content-center">
+
+        <form style="display:none;" id="bookpublisherupdateform" class="forms">
+            <h5 align="center">BOOK PUBLISHER UPDATE</h5>
+            <div class="mb-3 d-flex">
+                <input style="margin-bottom: 5px" type="text" name="isbn" class="form-control mr-2" placeholder="BOOK ISBN">
+                <button style="margin-bottom: 5px" type="submit" class="btn btn-dark">UPDATE</button>
+            </div>
+
+            <div>
+                <div>
+                    <input type="text" name="pubid" class="form-control" placeholder="PUBLISHER ID">
+                </div>
+            </div>
+        </form>
+
+    </div>
+
+    <div class="container align-items-center justify-content-center">
+
+        <form style="display:none;" id="bookdeleteform" class="forms">
+            <h5 align="center">BOOK DELETE</h5>
+            <div class="mb-3 d-flex">
+                <input style="margin-bottom: 5px;" type="text" name="isbn" class="form-control mr-2" placeholder="BOOK ISBN">
+                <button style="margin-bottom: 5px;" type="submit" class="btn btn-dark">DELETE</button>
+            </div>
+        </form>
+
+    </div>
+
+    <div class="container align-items-center justify-content-center">
+
+        <form style="display:none;" id="empdeleteform" class="forms">
+            <h5 align="center">EMPLOYEE DELETE</h5>
+            <div class="mb-3 d-flex">
+                <input style="margin-bottom: 5px;" type="text" name="empid" class="form-control mr-2" placeholder="EMPLOYEE ID">
+                <button style="margin-bottom: 5px;" type="submit" class="btn btn-dark">DELETE</button>
+            </div>
+        </form>
+
+    </div>
+
+    <div class="container align-items-center justify-content-center">
+
+        <form style="display:none;" id="pubdeleteform" class="forms">
+            <h5 align="center">PUBLISHER DELETE</h5>
+            <div class="mb-3 d-flex">
+                <input style="margin-bottom: 5px;" type="text" name="pubid" class="form-control mr-2" placeholder="PUBLISHER ID">
+                <button style="margin-bottom: 5px;" type="submit" class="btn btn-dark">DELETE</button>
+            </div>
+        </form>
+
+    </div>
+
+    <div class="container align-items-center justify-content-center">
+
+        <form style="display:none;" id="authordeleteform" class="forms">
+            <h5 align="center">AUTHOR DELETE</h5>
+            <div class="mb-3 d-flex">
+                <input style="margin-bottom: 5px" type="text" name="authid" class="form-control mr-2" placeholder="AUTHOR ID">
+                <button style="margin-bottom: 5px" type="submit" class="btn btn-dark">DELETE</button>
+            </div>
+        </form>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+</body>
+</html>

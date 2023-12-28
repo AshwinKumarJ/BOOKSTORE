@@ -1,0 +1,101 @@
+Isbn,Title,Year,Genre,Price,Version
+1,The Enchanted Chronicle,1925,Fiction,60,1
+2,Whispers in the Moonlight,1960,Fiction,110,2
+3,The Nebula Conundrum,1949,Science Fiction,190,1
+4,Chronicles of the Celestial Isles,1932,Science Fiction,80,1
+5,Secrets of the Midnight Garden,1951,Fiction,90,1
+6,Hearts in the Mist,1813,Romance,70,3
+7,The Lost Paradise,1954,Fiction,150,1
+8,Rebellion of the Mind,1945,Allegory,90,2
+9,Quest for the Crystal Kingdom,1937,Fantasy,50,1
+10,A Dance with Time,1927,Modernist Literature,140,1
+11,Echoes from the Laboratory,1818,Gothic Fiction,80,1
+12,The Serpent's Odyssey,1851,Adventure,40,1
+13,The Sorcerer's Legacy,1997,Fantasy,120,1
+14,The Lost World's Echo,2006,Post-apocalyptic Fiction,30,1
+15,The Elven Prophecies,1954,Fantasy,60,1
+16,Blood of the Night,1897,Gothic Fiction,190,1
+17,The Enigmatic Portrait,1890,Gothic Fiction,160,1
+18,Whispers in the Wuthering Heights,1847,Gothic Fiction,190,1
+19,The Great Expectations Quest,1861,Fiction,140,2
+20,The Bard's Odyssey,1855,Epic Poetry,110,1
+21,Romance in Verona's Shadows,1597,Tragedy,60,2
+22,The Tapestry of Wars and Peace,1869,Historical Novel,100,1
+23,Chronicles of a Tormented Mind,1866,Psychological Fiction,180,1
+24,A Century of Solitude,1967,Magic Realism,20,1
+25,The Haunting of the Overlook,1977,Horror,190,1
+26,The Lost Generation's Sunrise,1926,Modernist Literature,110,1
+27,The Brothers in Darkness,1880,Novel,110,1
+28,The Odyssey of a Lost Soul,1922,Modernist Literature,20,1
+29,The Quest for the Dragon's Gold,1937,Fantasy,40,1
+30,The Old Sailor and the Sea,1952,Novella,50,1
+31,The Wrath of Grapes,1939,Fiction,60,1
+32,Alice's Adventures Beyond the Looking Glass,1865,Fantasy,170,1
+33,The Alchemist's Quest,1988,Adventure,160,1
+34,Slaughter of the Time Travelers,1969,Science Fiction,60,1
+35,The Lost Chronicles of Valinor,1977,Fantasy,190,1
+36,The Astral Explorer,2011,Science Fiction,30,1
+37,The Tale of the Handmaid,1985,Dystopian Fiction,30,1
+38,A Tale of Two Parallel Cities,1859,Historical Novel,60,1
+39,The Odyssey Beyond 2001,1968,Science Fiction,160,1
+40,Fahrenheit's Literary Odyssey,1953,Dystopian Fiction,10,1
+41,The Existential Voyage,1942,Existentialism,120,1
+42,Whispers in the Woodlands,1908,Children's Literature,140,1
+43,The Purple Epistles,1982,Epistolary Novel,50,1
+44,The Abyss of the Heart,1899,Novella,110,1
+45,The Lost in the Rye,1951,Fiction,160,1
+46,The Road to Redemption,2006,Post-apocalyptic Fiction,170,1
+47,The Rings of Eldoria,1954,Fantasy,40,1
+48,The Quest for the Vinci Code,2003,Thriller,50,1
+49,Hearts and Prejudices,1813,Romance,150,3
+50,The Galaxy's Guide to Adventure,1979,Science Fiction,110,1
+51,The Enchanted Labyrinth,1925,Fiction,160,1
+52,Whispers in the Shadows,1960,Fiction,170,2
+53,The Timeless Chronicles,1949,Science Fiction,20,1
+54,The Astral Utopia,1932,Science Fiction,50,1
+55,Midnight Whispers,1951,Fiction,160,1
+56,Hearts in the Twilight,1813,Romance,190,3
+57,The Paradise Lost Chronicles,1954,Fiction,10,1
+58,Rebellion of the Soul,1945,Allegory,40,2
+59,The Quest for the Enchanted Realm,1937,Fantasy,30,1
+60,Dancing with the Ethereal,1927,Modernist Literature,170,1
+61,Echoes from the Laboratory of Dreams,1818,Gothic Fiction,160,1
+62,The Leviathan's Quest,1851,Adventure,20,1
+63,The Sorcerer's Legacy Unveiled,1997,Fantasy,60,1
+64,The Lost Road Chronicles,2006,Post-apocalyptic Fiction,30,1
+65,The Prophecies of Eldoria,1954,Fantasy,150,1
+66,Blood of the Nightfall,1897,Gothic Fiction,190,1
+67,The Enigmatic Portrait of Shadows,1890,Gothic Fiction,110,1
+68,Whispers in the Shadowed Heights,1847,Gothic Fiction,170,1
+69,The Great Expectations Quest Revealed,1861,Fiction,160,2
+70,The Odyssey of the Lost Bard,1861,Epic Poetry,30,1
+71,Romance in the Verona Nightfall,1597,Tragedy,40,2
+72,The Chronicles of War and Peace,1869,Historical Novel,20,1
+73,Chronicles of a Tormented Soul,1866,Psychological Fiction,10,1
+74,A Century of Solitude Rediscovered,1967,Magic Realism,40,1
+75,The Haunting of the Shining Overlook,1977,Horror,60,1
+76,The Sunrise Rises Again,1926,Modernist Literature,10,1
+77,The Darkness Within,1880,Novel,170,1
+78,The Lost Odyssey,1922,Modernist Literature,20,1
+79,The Quest for the Enchanted Dragon,1937,Fantasy,40,1
+80,The Old Man and the Sea Revisited,1952,Novella,20,1
+81,The Wrath of the Grapes Unveiled,1939,Fiction,170,1
+82,Alice's Adventures Through the Celestial Mirror,1865,Fantasy,10,1
+83,The Quest for the Alchemist's Gold,1988,Adventure,20,1
+84,Slaughter of the Time Travelers Unveiled,1969,Science Fiction,20,1
+85,The Chronicles of Valinor Unveiled,1977,Fantasy,30,1
+86,The Martian Chronicles,2011,Science Fiction,150,1
+87,The Tale of the Handmaid Revealed,1985,Dystopian Fiction,190,1
+88,A Tale of Two Cities Unveiled,1859,Historical Novel,20,1
+89,The Odyssey Beyond 2001 Revealed,1968,Science Fiction,10,1
+90,Fahrenheit's Literary Odyssey Unveiled,1953,Dystopian Fiction,60,1
+91,The Existential Voyage Revealed,1942,Existentialism,160,1
+92,Whispers in the Woodlands Rediscovered,1908,Children's Literature,20,1
+93,The Purple Epistles Rediscovered,1982,Epistolary Novel,50,1
+94,The Abyss of the Heart Rediscovered,1899,Novella,160,1
+95,The Lost in the Rye Rediscovered,1951,Fiction,40,1
+96,The Road to Redemption Rediscovered,2006,Post-apocalyptic Fiction,160,1
+97,The Rings of Eldoria Rediscovered,1954,Fantasy,170,1
+98,The Quest for the Vinci Code Rediscovered,2003,Thriller,30,1
+99,Hearts and Prejudices Rediscovered,1813,Romance,50,3
+100,The Galaxy's Guide to Adventure Rediscovered,1979,Science Fiction,100,1
